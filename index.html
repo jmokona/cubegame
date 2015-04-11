@@ -1,29 +1,32 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
-
-<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <center>
-<input type='text'><input type="submit" value='&gt;'>
-
-
-<img src='http://upload.wikimedia.org/wikipedia/commons/0/09/Cube-with-blender.png'>
+<input id='textInput' type='text'><button id="arrowButton" type="button">&gt;</button>
 </center>
 
+<br>
+<img id='hi' src='http://i.imgur.com/SFVESsJ.jpg' style='position: absolute; left: 80px; display:none'>
 
-</body>
+<img src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
+
+
+
+<script>
+
+$('button').click(function() {
+  var text = $('#textInput').val();
+  $('#textInput').val('');
+  
+  $("#hi").css("display", "block");
+});
+
+
+  
+</script>
+
+
 </html>
