@@ -37,7 +37,7 @@ function dragDiv(e, targ) {
 	console.log($(targ))
 	targ.style.left=coordX+e.clientX-offsetX+'px';
 	targ.style.top=coordY+e.clientY-offsetY+'px';
-	if(parseInt(targ.style.left) < -570 && parseInt(targ.style.top) > 270) {
+	if(parseInt(targ.style.left) < -480 && parseInt(targ.style.top) > 240) {
 		$(targ).fadeOut();
 	}
 	return false;
