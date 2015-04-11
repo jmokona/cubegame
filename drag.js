@@ -25,7 +25,6 @@ function startDrag(e) {
 
 	// move div element
 	document.onmousemove=dragDiv;
-
 	
 	return false;
 }
@@ -33,10 +32,11 @@ function dragDiv(e) {
 	if (!drag) {return};
 	if (!e) { var e= window.event};
 	var targ=e.target?e.target:e.srcElement;
+	if (targ.className != 'dragme') {return}
 	// move div element
+	console.log($(targ))
 	targ.style.left=coordX+e.clientX-offsetX+'px';
 	targ.style.top=coordY+e.clientY-offsetY+'px';
-	console.log(targ.style.top);
 	if(parseInt(targ.style.left) < -570 && parseInt(targ.style.top) > 270) {
 		$(targ).fadeOut();
 	}
