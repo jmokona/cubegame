@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 <style>
@@ -21,15 +20,15 @@
 
 <br>
 
-<img class=cube id='hi' src='http://i.imgur.com/SFVESsJ.jpg' style='position: absolute; left: 80px; display: none'>
+<img class='cube' id='hi' src='http://i.imgur.com/SFVESsJ.jpg' style='position: absolute; left: 80px; display: none'>
 
-<img class=cube id='sad' src='http://i.imgur.com/LvHvJ1B.png' style="position: absolute; left: 80px; display: none">
+<img class='cube' id='sad' src='http://i.imgur.com/LvHvJ1B.png' style="position: absolute; left: 80px; display: none">
 
-<img class=cube id='verySad' src='http://i.imgur.com/Hk7A2d4.png' style="position: absolute; left: 80px; display: none">
+<img class='cube' id='verySad' src='http://i.imgur.com/Hk7A2d4.png' style="position: absolute; left: 80px; display: none">
 
-<img class=cube id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
-
-<canvas id="mycanvas"></canvas>
+<img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
+<br><br><br><br><br>
+<canvas id="mycanvas" style="display: none"></canvas>
 
 <script>
 $('#arrowButton').click(function() {
@@ -51,7 +50,6 @@ $('#textInput').keypress(function(e){
   if(e.which == 13){//Enter key pressed
       $('#arrowButton').click();//Trigger search button click event
 }
-
 </script>
 
 <script>
@@ -79,7 +77,6 @@ function Grass(x, y) {
     // How fast we are moving
     this.velocity = 0;
     this.image = img;
-
 }
 
 Grass.prototype.draw = function () {
@@ -88,17 +85,17 @@ Grass.prototype.draw = function () {
 
 Grass.prototype.update = function() {
     // Check if we are underground
-    if (this.y + this.velocity + 36 > 500) {
+    if (this.y + this.velocity + 36 > 100) {
         // If so, move us back to ground level and set velocity to zero
         this.velocity = 0;
-        this.y = 500 - 36;
+        this.y = 100 - 36;
     } else {
         // Otherwise, move what is indicated by velocity
         this.velocity += gravity;
         this.y += this.velocity;
     } 
 }
-var grass1 = new Grass(333, 286);
+var grass1 = new Grass(35, 986);
 
 var requestAnim = window.requestAnimationFrame ||
                     window.webkitRequestAnimationFrame ||
