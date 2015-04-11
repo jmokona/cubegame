@@ -9,23 +9,34 @@
 </center>
 
 <br>
-<img id='hi' src='http://i.imgur.com/SFVESsJ.jpg' style='position: absolute; left: 80px; display:none'>
+
+<img id='hi' src='http://i.imgur.com/SFVESsJ.jpg' style='position: absolute; left: 80px; display: none'>
+
+<img id='sad' src='http://i.imgur.com/LvHvJ1B.png' style="position: absolute; left: 80px; display: none">
 
 <img src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
 
 
-
 <script>
 
-$('button').click(function() {
+$('#arrowButton').click(function() {
   var text = $('#textInput').val();
   $('#textInput').val('');
   
-  $("#hi").css("display", "block");
+  if(text == 'hi') {
+  	$("#hi").css("display", "block");
+  }
+  else if(text == 'you suck') {
+  	$('#sad').css('display', 'block');
+  }
 });
 
 
-  
+$('#textInput').keypress(function(e){
+  if(e.which == 13){//Enter key pressed
+      $('#arrowButton').click();//Trigger search button click event
+  }
+});
 </script>
 
 
