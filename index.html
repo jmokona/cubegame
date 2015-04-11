@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<title>Hi</title>
 <style>
 .cube {
   position: absolute;
@@ -14,6 +15,7 @@
 #side {
 	float: left;
 	padding-top: 120px;
+	height: 100%;
 }
 </style>
 </head>
@@ -40,32 +42,33 @@
 </div>
 
 <div id="side">
+  Foods<br><br><br>sdf
 </div>
 
 <script>
 $('#arrowButton').click(function() {
-  var text = $('#textInput').val();
+  var text = $('#textInput').val().toLowerCase();
   $('#textInput').val('');
   
-  if(text == 'hi') {
+  if(text.indexOf('hi') > -1 || text.indexOf('hello') > -1) {
     $("#hi").css("display", "block");
     $('#sad').css('display', 'none');
     $('#verySad').css('display', 'none');
     $('#originalCube').css('display', 'none');
   }
-  else if(text == 'you suck') {
+  else if(text.indexOf('you suck') > -1) {
     $('#sad').css('display', 'block');
     $('#originalCube').css('display', 'none');
     $('#verySad').css('display', 'none');
     $("#hi").css("display", "none");
   }
-  else if(text == 'you really suck') {
+  else if(text.indexOf('you really suck') > -1) {
     $('#verySad').css('display', 'block');
     $('#originalCube').css('display', 'none');
     $('#sad').css('display', 'none');
     $("#hi").css("display", "none");
   }
-  else if(text == 'love') {
+  else if(text.indexOf('love') > -1) {
     $('#originalCube').css('display', 'block');
     $('#sad').css('display', 'none');
     $('#verySad').css('display', 'none');
