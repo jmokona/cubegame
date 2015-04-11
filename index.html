@@ -1,7 +1,21 @@
 <!doctype html>
 
 <html lang="en">
+<head>
+<style>
+.cube{
+  position:absolute;
+  top:59px;
+  left:8px;
+}
 
+
+</style>
+
+
+</head>
+
+<body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <center>
@@ -10,18 +24,17 @@
 
 <br>
 
-<img id='hi' src='http://i.imgur.com/SFVESsJ.jpg' style='position: absolute; left: 80px; display: none'>
+<img class=cube id='hi' src='http://i.imgur.com/SFVESsJ.jpg' style='position: absolute; left: 80px; display: none'>
 
-<img id='sad' src='http://i.imgur.com/LvHvJ1B.png' style="position: absolute; left: 80px; display: none">
+<img class=cube id='sad' src='http://i.imgur.com/LvHvJ1B.png' style="position: absolute; left: 80px; display: none">
 
-<img id='verySad' src='http://i.imgur.com/Hk7A2d4.png' style="position: absolute; left: 80px; display: none">
+<img class=cube id='verySad' src='http://i.imgur.com/Hk7A2d4.png' style="position: absolute; left: 80px; display: none">
 
-<img id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
+<img class=cube id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
 
 
 
 <script>
-
 $('#arrowButton').click(function() {
   var text = $('#textInput').val();
   $('#textInput').val('');
@@ -30,21 +43,19 @@ $('#arrowButton').click(function() {
     $("#hi").css("display", "block");
   }
   else if(text == 'you suck') {
-  	$('#sad').css('display', 'block');
+    $('#sad').css('display', 'block');
   }
   else if(text == 'you really suck') {
     $('#verySad').css('display', 'block');
     $('#originalCube').css('display', 'none');
   }
 });
-
-
 $('#textInput').keypress(function(e){
   if(e.which == 13){//Enter key pressed
       $('#arrowButton').click();//Trigger search button click event
-  }
-});
+}
+
 </script>
 
-
+</body>
 </html>
