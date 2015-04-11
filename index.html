@@ -20,11 +20,11 @@
 
 <br>
 
-<img class='cube' id='hi' src='http://i.imgur.com/SFVESsJ.jpg' style='position: absolute; left: 80px; display: none'>
+<img class='cube' id='hi' src='img/hi.png' style='position: absolute; left: 80px; display: none'>
 
-<img class='cube' id='sad' src='http://i.imgur.com/LvHvJ1B.png' style="position: absolute; left: 80px; display: none">
+<img class='cube' id='sad' src='img/sad.png' style="position: absolute; left: 80px; display: none">
 
-<img class='cube' id='verySad' src='http://i.imgur.com/Hk7A2d4.png' style="position: absolute; left: 80px; display: none">
+<img class='cube' id='verySad' src='img/verySad.png' style="position: absolute; left: 80px; display: none">
 
 <!-- <img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
 <br><br><br><br><br> -->
@@ -53,10 +53,10 @@ $('#arrowButton').click(function() {
     $("#hi").css("display", "none");
   }
   else if(text == 'love') {
-  	$('#originalCube').css('display', 'block');
-  	$('#sad').css('display', 'none');
-  	$('#verySad').css('display', 'none');
-  	$("#hi").css("display", "none");
+    $('#originalCube').css('display', 'block');
+    $('#sad').css('display', 'none');
+    $('#verySad').css('display', 'none');
+    $("#hi").css("display", "none");
   }
 });
 $('#textInput').keypress(function(e){
@@ -75,14 +75,14 @@ var ctx = canvas.getContext('2d');
 var gravity = 0.1;
 
 canvas.width = 1000;
-canvas.height = 1000;
+canvas.height = 517;
 
 // Whether or not the up key is pressed
 var keypressed = false;
 
 // Load image
 var img = new Image();
-img.src = "http://i.imgur.com/vL1iaYj.jpg";
+img.src = "img/base.png";
 
 // Some grass
 function Grass(x, y) {
