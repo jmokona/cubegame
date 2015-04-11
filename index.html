@@ -26,9 +26,9 @@
 
 <img class='cube' id='verySad' src='http://i.imgur.com/Hk7A2d4.png' style="position: absolute; left: 80px; display: none">
 
-<img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
-<br><br><br><br><br>
-<canvas id="mycanvas" style="display: none"></canvas>
+<!-- <img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
+<br><br><br><br><br> -->
+<canvas id="mycanvas" id='originalCube'></canvas>
 
 <script>
 $('#arrowButton').click(function() {
@@ -49,7 +49,8 @@ $('#arrowButton').click(function() {
 $('#textInput').keypress(function(e){
   if(e.which == 13){//Enter key pressed
       $('#arrowButton').click();//Trigger search button click event
-}
+  }
+});
 </script>
 
 <script>
