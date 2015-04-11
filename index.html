@@ -44,6 +44,8 @@ body {
 
 	<img class='cube' id='verySad' src='img/verySad.png'>
 
+  <img class='cube' id='superhappy' src='img/birthday.png'>
+
 	<!-- <img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
 	<br><br><br><br><br> -->
 	<canvas id="originalCube"></canvas>
@@ -64,22 +66,33 @@ $('#arrowButton').click(function() {
     $('#sad').css('display', 'none');
     $('#verySad').css('display', 'none');
     $('#originalCube').css('display', 'none');
+    $('#superhappy').css('display', 'none');
   }
   else if(text.indexOf('you suck') > -1) {
     $('#sad').css('display', 'block');
     $('#originalCube').css('display', 'none');
     $('#verySad').css('display', 'none');
     $("#hi").css("display", "none");
+    $('#superhappy').css('display', 'none');
   }
   else if(text.indexOf('you really suck') > -1) {
     $('#verySad').css('display', 'block');
     $('#originalCube').css('display', 'none');
     $('#sad').css('display', 'none');
     $("#hi").css("display", "none");
+    $('#superhappy').css('display', 'none');
   }
   else if(text.indexOf('love') > -1) {
     $('#originalCube').css('display', 'block');
     $('#sad').css('display', 'none');
+    $('#verySad').css('display', 'none');
+    $("#hi").css("display", "none");
+    $('#superhappy').css('display', 'none');
+  }
+  else if(text.indexOf('happy birthday') > -1) {
+    $('#superhappy').css('display', 'block');
+    $('#sad').css('display', 'none');
+    $('#originalCube').css('display', 'none');
     $('#verySad').css('display', 'none');
     $("#hi").css("display", "none");
   }
