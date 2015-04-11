@@ -44,16 +44,19 @@ $('#arrowButton').click(function() {
     $('#sad').css('display', 'block');
     $('#originalCube').css('display', 'none');
     $('#verySad').css('display', 'none');
+    $("#hi").css("display", "none");
   }
   else if(text == 'you really suck') {
     $('#verySad').css('display', 'block');
     $('#originalCube').css('display', 'none');
     $('#sad').css('display', 'none');
+    $("#hi").css("display", "none");
   }
   else if(text == 'love') {
   	$('#originalCube').css('display', 'block');
   	$('#sad').css('display', 'none');
   	$('#verySad').css('display', 'none');
+  	$("#hi").css("display", "none");
   }
 });
 $('#textInput').keypress(function(e){
