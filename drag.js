@@ -26,6 +26,7 @@ function startDrag(e) {
 	// move div element
 	document.onmousemove=dragDiv;
 
+	
 	return false;
 }
 function dragDiv(e) {
@@ -35,6 +36,10 @@ function dragDiv(e) {
 	// move div element
 	targ.style.left=coordX+e.clientX-offsetX+'px';
 	targ.style.top=coordY+e.clientY-offsetY+'px';
+	console.log(targ.style.top);
+	if(parseInt(targ.style.left) < -570 && parseInt(targ.style.top) > 270) {
+		$(targ).fadeOut();
+	}
 	return false;
 }
 function stopDrag() {
@@ -43,5 +48,9 @@ function stopDrag() {
 window.onload = function() {
 	document.onmousedown = startDrag;
 	document.onmouseup = stopDrag;
-	$('#textInput').focus();
+	
 }
+
+$( document ).ready(function() {
+    $('#textInput').focus();
+});
