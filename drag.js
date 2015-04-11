@@ -24,14 +24,14 @@ function startDrag(e) {
 	drag = true;
 
 	// move div element
-	document.onmousemove=dragDiv;
+	document.onmousemove=function(e) { dragDiv(e, targ) };
 	
 	return false;
 }
-function dragDiv(e) {
+function dragDiv(e, targ) {
 	if (!drag) {return};
 	if (!e) { var e= window.event};
-	var targ=e.target?e.target:e.srcElement;
+	/*var targ=e.target?e.target:e.srcElement;*/
 	if (targ.className != 'dragme') {return}
 	// move div element
 	console.log($(targ))
