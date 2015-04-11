@@ -28,7 +28,7 @@
 
 <!-- <img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
 <br><br><br><br><br> -->
-<canvas id="mycanvas" id='originalCube'></canvas>
+<canvas id="originalCube"></canvas>
 
 <script>
 $('#arrowButton').click(function() {
@@ -37,13 +37,23 @@ $('#arrowButton').click(function() {
   
   if(text == 'hi') {
     $("#hi").css("display", "block");
+    $('#sad').css('display', 'none');
+    $('#verySad').css('display', 'none');
   }
   else if(text == 'you suck') {
     $('#sad').css('display', 'block');
+    $('#originalCube').css('display', 'none');
+    $('#verySad').css('display', 'none');
   }
   else if(text == 'you really suck') {
     $('#verySad').css('display', 'block');
     $('#originalCube').css('display', 'none');
+    $('#sad').css('display', 'none');
+  }
+  else if(text == 'love') {
+  	$('#originalCube').css('display', 'block');
+  	$('#sad').css('display', 'none');
+  	$('#verySad').css('display', 'none');
   }
 });
 $('#textInput').keypress(function(e){
@@ -56,7 +66,7 @@ $('#textInput').keypress(function(e){
 <script>
 //Make cube jump
 
-var canvas = document.getElementById("mycanvas");
+var canvas = document.getElementById("originalCube");
 var ctx = canvas.getContext('2d');
 // Gravity, how fast it goes down
 var gravity = 0.1;
