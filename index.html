@@ -14,7 +14,10 @@
 
 <img id='sad' src='http://i.imgur.com/LvHvJ1B.png' style="position: absolute; left: 80px; display: none">
 
-<img src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
+<img id='verySad' src='http://i.imgur.com/Hk7A2d4.png' style="position: absolute; left: 80px; display: none">
+
+<img id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
+
 
 
 <script>
@@ -24,10 +27,14 @@ $('#arrowButton').click(function() {
   $('#textInput').val('');
   
   if(text == 'hi') {
-  	$("#hi").css("display", "block");
+    $("#hi").css("display", "block");
   }
   else if(text == 'you suck') {
   	$('#sad').css('display', 'block');
+  }
+  else if(text == 'you really suck') {
+    $('#verySad').css('display', 'block');
+    $('#originalCube').css('display', 'none');
   }
 });
 
