@@ -8,6 +8,13 @@
   left: 43px;
   display: none;
 }
+#main {
+	float: left;
+}
+#side {
+	float: left;
+	padding-top: 120px;
+}
 </style>
 </head>
 
@@ -20,16 +27,20 @@
 </center>
 
 <br>
+<div id="main">
+	<img class='cube' id='hi' src='img/hi.png'>
 
-<img class='cube' id='hi' src='img/hi.png'>
+	<img class='cube' id='sad' src='img/sad.png'>
 
-<img class='cube' id='sad' src='img/sad.png'>
+	<img class='cube' id='verySad' src='img/verySad.png'>
 
-<img class='cube' id='verySad' src='img/verySad.png'>
+	<!-- <img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
+	<br><br><br><br><br> -->
+	<canvas id="originalCube"></canvas>
+</div>
 
-<!-- <img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
-<br><br><br><br><br> -->
-<canvas id="originalCube"></canvas>
+<div id="side">
+</div>
 
 <script>
 $('#arrowButton').click(function() {
@@ -76,7 +87,7 @@ var ctx = canvas.getContext('2d');
 // Gravity, how fast it goes down
 var gravity = 0.1;
 
-canvas.width = 1000;
+canvas.width = 783;
 canvas.height = 517;
 
 // Whether or not the up key is pressed
