@@ -1,0 +1,85 @@
+  @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+   a{
+    text-decoration:none;
+   }
+
+  .cube {
+    position: absolute;
+    top: 172px;
+    left: 43px;
+    display: none;
+  }
+  /*#main {
+  	float: left;
+  }
+  #side {
+  	float: left;
+  	padding-top: 120px;
+  	height: 100%;
+  }*/
+  body {
+    background-image:url("img/background.png");
+    background-repeat:no-repeat;
+    overflow:hidden;
+  }
+
+  h2{
+    font: 24px Montserrat;
+    text-align:center;
+    color:#111111;
+  }
+
+  p{
+    font: 14px Helvetica;
+    text-align:center;
+    color:#111111;
+    border-bottom: 1px dashed #999;
+    display: inline;
+  }
+
+  #arrowButton{
+    background-color: #AAAAAA;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius:3px;
+    color: #FAFAFA;
+    font-family: Montserrat;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border:solid;
+    border-width:1px;
+    border-color:#777;
+  }
+
+  #arrowButton:hover{
+    background-color: #999999;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius:3px;
+    color: #EEE;
+    font-family: Montserrat;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border:solid;
+    border-width: 1px;
+    border-color:#777;
+  }
+
+  #textInput{
+    background-color: #ddd;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius:3px;
+    color: #FAFAFA;
+    font-family: Montserrat;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border:solid;
+    border-width:1px;
+    border-color:#777;
+  }
+
