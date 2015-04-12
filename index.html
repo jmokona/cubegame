@@ -26,8 +26,8 @@
     background-image:url("img/background.png");
     background-repeat:no-repeat;
     overflow:hidden;
-
   }
+
   h2{
     font: 24px Montserrat;
     text-align:center;
@@ -46,7 +46,7 @@
     cursor: pointer;
     border:solid;
     border-width:1px;
-    border-color:#777777;
+    border-color:#777;
   }
 
   #arrowButton:hover{
@@ -64,7 +64,23 @@
     border-color:#777;
   }
 
-  
+  #textInput{
+    background-color: #ddd;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius:3px;
+    color: #FAFAFA;
+    font-family: Montserrat;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border:solid;
+    border-width:1px;
+    border-color:#777;
+  }
+
+
+
   </style>
 </head>
 
@@ -91,8 +107,6 @@
 
   <img class='cube' id='superhappy' src='img/birthday.png'>
 
-	<!-- <img class='cube' id='originalCube' src='http://i.imgur.com/vL1iaYj.jpg' style='left: 80px'>
-	<br><br><br><br><br> -->
 	<canvas id="originalCube" style='position: absolute;'></canvas>
 
 	<img class='dragme' style='position: absolute; top:44px; left: 938px; width: 100px;'src='img/marshmallow.png'>
