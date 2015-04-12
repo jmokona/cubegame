@@ -61,8 +61,6 @@
 	<br><br><br><br><br> -->
 	<canvas id="originalCube" style='position: absolute;'></canvas>
 
-	<img class='dragme' style='position: absolute; top: 50px; left: 960px; width: 100px;'src='img/marshmallow.png'>
-  <img id='icecream' class='dragme' style='position: absolute; top: 50px; left: 870px; width: 70px;'src='img/icecream.png'>
 </div>
 
 
@@ -122,10 +120,10 @@ $('#textInput').keypress(function(e){
 var canvas = document.getElementById("originalCube");
 var ctx = canvas.getContext('2d');
 // Gravity, how fast it goes down
-var gravity = 0.1;
+var gravity = 0.13;
 
 canvas.width = 783;
-canvas.height = 517;
+canvas.height = 510;
 
 // Whether or not the up key is pressed
 var keypressed = false;
