@@ -8,6 +8,10 @@
   <style>
       @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+   a{
+    text-decoration:none;
+   }
+
   .cube {
     position: absolute;
     top: 172px;
@@ -32,6 +36,14 @@
     font: 24px Montserrat;
     text-align:center;
     color:#111111;
+  }
+
+  p{
+    font: 14px Helvetica;
+    text-align:center;
+    color:#111111;
+    border-bottom: 1px dashed #999;
+    display: inline;
   }
 
   #arrowButton{
@@ -79,14 +91,12 @@
     border-color:#777;
   }
 
-
-
   </style>
 </head>
 
 <body>
-<h2>Meet Cubey</h2>
-
+<a href="/index.html"><h2>Meet Cubey</h2></a>
+<a href="/about.html"><p>What is this?</p></a>
 <link rel="stylesheet" type="text/css" href="drag.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -112,8 +122,6 @@
 	<img class='dragme' style='position: absolute; top:44px; left: 938px; width: 100px;'src='img/marshmallow.png'>
   <img id='icecream' class='dragme' style='position: absolute; top: 176px; left: 949px; width: 70px;'src='img/icecream.png'>
 </div>
-
-
 
 
 <script>
