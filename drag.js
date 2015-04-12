@@ -3,13 +3,14 @@ function startDrag(e) {
 	if (!e) {
 		var e = window.event;
 	}
-	if(e.preventDefault) e.preventDefault();
 
 	// IE uses srcElement, others use target
 	var targ = e.target ? e.target : e.srcElement;
 
 	if (targ.className != 'dragme') {return};
 	// calculate event X, Y coordinates
+	if(e.preventDefault) e.preventDefault();
+
 	offsetX = e.clientX;
 	offsetY = e.clientY;
 
