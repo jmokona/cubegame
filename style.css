@@ -25,8 +25,8 @@
   }
 
   .tooltip:hover:after{
-    background: #333;
-    background: rgba(0,0,0,0.8);
+    background: #DDD;
+    background: rgba(0,0,0,0.6);
     border-radius: 5px;
     bottom:26px;
     color:#fff;
@@ -70,7 +70,7 @@
   }
 
   p{
-    font: 14px Droid Serif;
+    font: 16px "Corbel";
     text-align:left;
     color:#111111;
     border-bottom: 1px dashed #999;
