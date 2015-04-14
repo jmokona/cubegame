@@ -2,6 +2,7 @@
 
    a{
     text-decoration:none;
+    text-align: center;
    }
 
   .cube {
@@ -52,6 +53,8 @@
     background-image:url("img/background.png");
     background-repeat:no-repeat;
     overflow:hidden;
+    background-color:#d0dcd7;
+    z-index: 100;
     
   }
 
@@ -62,8 +65,8 @@
   }
 
   h3{
-    font: 14px 'Helvetica Neue', Helvetica;
-    text-align:left;
+    font: 16px Corbel;
+    text-align: center;
     color:#111111;
     border-bottom: 1px dashed #999;
     display: inline;
@@ -71,7 +74,7 @@
 
   p{
     font: 16px "Corbel";
-    text-align:left;
+    text-align:center;
     color:#111111;
     border-bottom: 1px dashed #999;
     display: inline;
@@ -86,11 +89,14 @@
   }
 
   div {
-    width:100px;
-    height: 370px;
-    padding: 25px;
-    border: 4px solid navy;
-    margin-left:900px;
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  div.food{
+    border: 4px #333;
   }
 
   #arrowButton{
@@ -137,4 +143,32 @@
     border-width:1px;
     border-color:#777;
   }
+
+  .popup_block{
+    display:none;
+    background:#fff;
+    padding:20px;
+    border:1px solid #eee;  /* if you want a solid white pop-up, delete this */
+    float:left;
+    position:fixed;
+    top:50%;left:50%;
+    z-index: 99999;
+    -webkit-box-shadow: 0px 0px 20px #000; /* delete for solid white */
+    -moz-box-shadow: 0px 0px 20px #000; /* delete for solid white */
+    box-shadow: 0px 0px 20px #000; /* delete for solid white */
+}
+ 
+*html #fade {position: absolute;}
+*html .popup_block {position: absolute;}
+#fade {
+    display:none;
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:9999;
+    background:#000; /* change to #fff for solid white */
+    opacity:0.5; /* change to opacity:1; */
+}
 
