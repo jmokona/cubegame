@@ -2,6 +2,41 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://ogp.me/ns/fb#">
   <head>
+<!--
+    <script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+
+-->
+
   <title>Meet Cubey!</title>
    <!--Facebook thumbnail image-->
       <meta property="og:image" content="img/marshmallow.png"/>
@@ -11,9 +46,11 @@
 </head>
 
 <body>
-<h2>Meet Cubey</h2>
-<!--<a title="A project created by Paula Huang, Mokona Jiang, and Christina Liu at Bitcamp 2015. You can say 'hi', 'you suck', 'you really suck' or 'happy birthday'to cubey. You can also press the up arrow key to make Cubey jump. If you want to reset Cubey, tell him 'love'."><p>What is this?</p></a>-->
-
+  <h2>Meet Cubey</h2>
+  <div>
+    <a title="A project created by Paula Huang, Mokona Jiang, and Christina Liu at Bitcamp 2015. You can say 'hi', 'you suck', 'you really suck' or 'happy birthday'to cubey. You can also press the up arrow key to make Cubey jump. If you want to reset Cubey, tell him 'love'."><h3>What is this?</h3></a>
+    <!-- Pop up <a href="#?w=300" rel="box1" class="poplight">hueh</a>-->
+  </div>
 
 <link rel="stylesheet" type="text/css" href="drag.css">
 
@@ -31,6 +68,7 @@
 	<img class='cube' id='sad' src='img/sad.png'>
 	<img class='cube' id='verySad' src='img/verySad.png'>
   <img class='cube' id='superhappy' src='img/birthday.png'>
+  <img class='cube' id='error' src='img/error.png'>
 
 	<canvas id="originalCube" style='position: absolute;'></canvas>
 
@@ -55,21 +93,21 @@ $('#arrowButton').click(function() {
     $('#sad').css('display', 'block');
     $('#originalCube').css('display', 'none');
     $('#verySad').css('display', 'none');
-    $("#hi").css("display", "none");
+    $("#hi").css("display", 'none');
     $('#superhappy').css('display', 'none');
   }
   else if(text.indexOf('you really suck') > -1) {
     $('#verySad').css('display', 'block');
     $('#originalCube').css('display', 'none');
     $('#sad').css('display', 'none');
-    $("#hi").css("display", "none");
+    $("#hi").css("display", 'none');
     $('#superhappy').css('display', 'none');
   }
   else if(text.indexOf('love') > -1) {
     $('#originalCube').css('display', 'block');
     $('#sad').css('display', 'none');
     $('#verySad').css('display', 'none');
-    $("#hi").css("display", "none");
+    $("#hi").css("display", 'none');
     $('#superhappy').css('display', 'none');
   }
   else if(text.indexOf('happy birthday') > -1) {
@@ -77,7 +115,7 @@ $('#arrowButton').click(function() {
     $('#sad').css('display', 'none');
     $('#originalCube').css('display', 'none');
     $('#verySad').css('display', 'none');
-    $("#hi").css("display", "none");
+    $("#hi").css("display", 'none');
   }
 });
 $('#textInput').keypress(function(e){
@@ -161,4 +199,12 @@ document.addEventListener('keydown', function (e) {
 </script>
 
 </body>
+
+<div id="box1" class="popup_block">
+CONTENT
+CONTENT
+CONTENT
+</div>
+ 
+
 </html>
