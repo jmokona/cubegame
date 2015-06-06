@@ -88,6 +88,16 @@
     display: inline;
   }
 
+  .commands{
+    color:#1d8550;
+    font-weight:bold;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .left{
+    text-align: left;
+  }
+
   div {
     width:300px;
     margin-left: auto;
@@ -144,31 +154,43 @@
     border-color:#777;
   }
 
-  .popup_block{
-    display:none;
-    background:#fff;
-    padding:20px;
-    border:1px solid #eee;  /* if you want a solid white pop-up, delete this */
-    float:left;
-    position:fixed;
-    top:50%;left:50%;
-    z-index: 99999;
-    -webkit-box-shadow: 0px 0px 20px #000; /* delete for solid white */
-    -moz-box-shadow: 0px 0px 20px #000; /* delete for solid white */
-    box-shadow: 0px 0px 20px #000; /* delete for solid white */
-}
- 
-*html #fade {position: absolute;}
-*html .popup_block {position: absolute;}
-#fade {
-    display:none;
-    position:fixed;
-    left:0px;
-    top:0px;
-    width:100%;
-    height:100%;
-    z-index:9999;
-    background:#000; /* change to #fff for solid white */
-    opacity:0.5; /* change to opacity:1; */
-}
 
+#fade { /*--Transparent background layer--*/
+display: none; /*--hidden by default--*/
+background: #000;
+background-image: url('');
+position: fixed; left: 0; top: 0;
+width: 100%; height: 100%;
+opacity: .80;
+z-index: 9999;
+}
+.popup_block{
+ display: none; /*--hidden by default--*/
+ background: #fff;
+ padding: 20px;
+ border: 2px solid #ddd;
+ float: left;
+ font-size: 12px;
+ position: fixed;
+ top: 50%; left: 50%;
+ z-index: 99999;
+ /*--CSS3 Box Shadows--*/
+ -webkit-box-shadow: 0px 0px 20px #000;
+ -moz-box-shadow: 0px 0px 20px #000;
+ box-shadow: 0px 0px 20px #000;
+ /*--CSS3 Rounded Corners--*/
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+}
+img.btn_close {
+ float: right;
+ margin: -5px -5px 0 0;
+}
+/*--Making IE6 Understand Fixed Positioning--*/
+*html #fade {
+ position: absolute;
+}
+*html .popup_block {
+ position: absolute;
+}

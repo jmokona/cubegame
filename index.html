@@ -2,40 +2,38 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://ogp.me/ns/fb#">
   <head>
-<!--
-    <script type="text/javascript"
+
+<script type="text/javascript"
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
 //
 $('a.poplight[href^=#]').click(function() {
-var popID = $(this).attr('rel'); //Get Popup Name
-var popURL = $(this).attr('href'); //Get Popup href to define size
+var popID = $(this).attr('rel'); //Get Popup Name 
+var popURL = $(this).attr('href'); //Get Popup href to define size 
 var query= popURL.split('?');
 var dim= query[1].split('&');
 var popWidth = dim[0].split('=')[1]; //Gets the first query string value
-$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
-var popMargTop = ($('#' + popID).height() + 80) / 2;
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="javascript:location.reload();" class="close"><img src="http://upload.wikimedia.org/wikipedia/commons/f/f8/Tooltip-CloseButton.png" class="btn_close" title="escape" alt="escape" /></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2; 
 var popMargLeft = ($('#' + popID).width() + 80) / 2;
 //Apply Margin to Popup
-$('#' + popID).css({
-'margin-top' : -popMargTop,
-'margin-left' : -popMargLeft
-});
-$('body').append('<div id="fade"></div>');
+$('#' + popID).css({ 
+'margin-top' : -popMargTop, 
+'margin-left' : -popMargLeft 
+}); 
+$('body').append('<div id="fade"></div>'); 
 $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
-return false;
-});
-$('a.close, #fade').live('click', function() {
+return false; 
+}); 
+$('a.close, #fade').live('click', function() { 
 $('#fade , .popup_block').fadeOut(function() {
 $('#fade, a.close').remove(); //fade them both out
+}); 
+return false; 
 });
-return false;
-});
-});
+}); 
 </script>
-
--->
 
   <title>Meet Cubey!</title>
    <!--Facebook thumbnail image-->
@@ -58,7 +56,8 @@ return false;
   <h2>Meet Cubey</h2>
   
   <div>
-    <a title="A project created by Paula Huang, Mokona Jiang, and Christina Liu at Bitcamp 2015. You can say 'hi', 'you suck', 'you really suck' or 'happy birthday'to cubey. You can also press the up arrow key to make Cubey jump. If you want to reset Cubey, tell him 'love'."><h3>What is this?</h3></a>
+    <a title="A project created by Paula Huang, Mokona Jiang, and Christina Liu at Bitcamp 2015. You can say 'hi', 'you suck', 'you really suck' or 'happy birthday'to cubey. You can also press the up arrow key to make Cubey jump. If you want to reset Cubey, tell him 'love'."><h3></a>
+    <a href="#?w=500" rel="02" class="poplight">What is this?</a></h3>
     <!-- Pop up <a href="#?w=300" rel="box1" class="poplight">hueh</a>-->
   </div>
 
@@ -203,12 +202,20 @@ document.addEventListener('keydown', function (e) {
 </script>
 
 </body>
+<!--Info box-->
+<div id="02" class="popup_block left">
+this box doesn't actually close properly so it's just going to refresh the page, sorry.<br><br>
+This site was created throughout the weekend of April 11th, 2015, during the hackathon Bitcamp hosted at the University of Maryland. While brainstorming, one of our team members, Mokona, stumbled across a small stress cube that was being handed out by one of the sponsers. With cube in hang and goal in sight, we sought out to create an interactive website dedicated to our near and dear friend Cubey.<br>
+You can type out commands such as 
+  <ul>
+    <li><span class="commands">hello</li>
+    <li><span class="commands">hi</li>
+    <li><span class="commands">you suck</li>
+    <li><span class="commands">you really suck</li>
+    <li><span class="commands">happy birthday</li>
+  </ul>
 
-<div id="box1" class="popup_block">
-CONTENT
-CONTENT
-CONTENT
-</div>
- 
+  The food images are also fully functional and can be clicked and dragged to feed Cubey.
+</div></div>
 
 </html>
