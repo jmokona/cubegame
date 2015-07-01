@@ -73,19 +73,22 @@
   }
 
   p{
-    font: 16px "Corbel";
+    font: "Calibri";
     text-align:center;
+    color:#111111;
+    display: inline;
+  }
+
+  p.subtitle {
+    font: 14px "Calibri";
+    text-align:left;
     color:#111111;
     border-bottom: 1px dashed #999;
     display: inline;
   }
 
-  p.subtitle {
-    font: 14px "Corbel";
-    text-align:left;
-    color:#111111;
-    border-bottom: 1px dashed #999;
-    display: inline;
+  .infobox{
+    font: 12px "Calibri";
   }
 
   .commands{
